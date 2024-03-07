@@ -1,0 +1,98 @@
+.header-content{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #ffae7e;
+    background-color: #FFBE98;
+}
+.header-title{
+    font-size: 1.55rem;
+    font-weight: 800;
+    margin-left: 15px;
+    color: white;
+    text-decoration-line: none;
+}
+.header-menu_ul{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-decoration-line: none;
+}
+.header-menu ul li{
+    margin-right: 15px;
+}
+.header-menu ul a{
+    text-decoration-line: none;
+    color: white;
+    font-weight: 800;
+}
+
+/*햄버거바*/
+
+.hambar,
+input[id="icon"]{
+    display: none;
+  }
+input[id="icon"] + label{
+    margin: 10px;
+    display:block;
+    width:35px;
+    height:25px;
+    cursor:pointer;
+} 
+input[id="icon"] + label span {
+    margin-top: 5px;
+    display:block;
+    width:100%;
+    height:5px;
+    border-radius:25px;
+    background: white;
+    transition: all 0.3s;
+}
+input[id="icon"]:checked + label span:nth-child(1) {
+    transform:translateY(10px) rotate(45deg);
+}
+input[id="icon"]:checked + label span:nth-child(2) {
+    transform:translateY(-10%) rotate(-45deg);
+}
+input[id="icon"]:checked + label span:nth-child(3) {
+    opacity: 0; 
+}
+.hambar-menu {
+    position:fixed;
+    top: 45px;
+    right: 0;
+    height: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.35s;
+    overflow: hidden;
+}
+#icon:checked+ label+ .hambar-menu {
+    margin-top: 2px;
+    height: 180px;
+    border: 4px solid #ffae7e;
+    background-color: #FFBE98;
+}
+.hambar-menu ul,
+.hambar-menu ul li{
+    list-style-type: none;
+    margin-top: 25px;
+    font-size: 1.45rem;
+    font-weight: 800;
+    padding: 0;
+}
+@media screen and (max-width: 603px){
+    .hambar{
+        display: block;
+    }
+    .header-menu_ul{
+        display: none;
+    }
+  }
