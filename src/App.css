@@ -1,4 +1,7 @@
-@font-face{
+@font-face {
     font-family: 'BinggraeII-Bold';
     src: url(./Font/BinggraeII-Bold.ttf);
+  }
+*{
+    font-family: 'BinggraeII-Bold';
 }
