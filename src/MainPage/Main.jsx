@@ -1,9 +1,19 @@
+import React from 'react';
+import mainimg from '../img/mainimg.jpg';
 function Main() {
   return (
     <div>
-      요기다가 다 넣을껍니다.
+      <img
+        src={mainimg}
+        alt="메인이미지"
+        style={{
+          width: '100%',
+          border: '2px solid black', 
+          borderRadius: '5px'
+        }}
+      />
     </div>
-  )
+  );
 }
 
-export default Main
+export default Main;
