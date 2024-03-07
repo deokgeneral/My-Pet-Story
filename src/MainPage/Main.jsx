@@ -3,15 +3,17 @@ import mainimg from '../img/mainimg.jpg';
 function Main() {
   return (
     <div>
+      <div>
       <img
         src={mainimg}
-        alt="메인이미지"
+        alt='메인이미지'
         style={{
-          width: '100%',
-          border: '2px solid black', 
-          borderRadius: '5px'
+        maxWidth: '90%',
+        maxHeight: '550px',
+        borderRadius: '25px' 
         }}
       />
+      </div>
     </div>
   );
 }
