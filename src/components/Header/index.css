@@ -90,11 +90,3 @@ input[id="icon"]:checked + label span:nth-child(3) {
     font-weight: 800;
     padding: 0;
 }
-@media screen and (max-width: 603px){
-    .hambar{
-        display: block;
-    }
-    .header-menu_ul{
-        display: none;
-    }
-  }

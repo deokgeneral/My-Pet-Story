@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import Popup from '../components/Popup';
 import mainimg from '../img/mainimg.png';
 import './index.css';
 
 function Main() {
   const [usermbti, setUsermbti] = useState('');
-  const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleInputChange = (e) => {
-    setUsermbti(e.target.value);
+    setUsermbti(e.target.value.toUpperCase());
   };
 
   const handleSubmit = () => {
-    navigate(`/result/${usermbti.toUpperCase()}`);
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
   };
 
   const handleKeyPress = (Enter) => {
@@ -20,18 +24,19 @@ function Main() {
       handleSubmit();
     }
   };
+
   return (
     <div className='maincomtents'>
       <div className='mainimg'>
-      <img
-        src={mainimg}
-        alt='메인이미지'
-        style={{
-        width: '77vw',
-        maxHeight: '500px',
-        margin:'48px 0 0 10px',
-        }}
-      />
+        <img
+          src={mainimg}
+          alt='메인이미지'
+          style={{
+            width: '77vw',
+            maxHeight: '500px',
+            margin: '48px 0 0 10px',
+          }}
+        />
       </div>
       <div className='picket-container'>
         <div className='piket'>
@@ -46,14 +51,17 @@ function Main() {
             className='textbox'
           />
           <button
-          onClick={handleSubmit}
-          type='button'
-          className='resultbtn'
+            onClick={handleSubmit}
+            type='button'
+            className='resultbtn'
           >
-          결과보기
+            결과보기
           </button>
         </div>
       </div>
+      {showPopup && (
+        <Popup mbti={usermbti} onClose={handleClosePopup} />
+      )}
     </div>
   );
 }
