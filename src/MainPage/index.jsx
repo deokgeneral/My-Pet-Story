@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Popup from '../components/Popup';
-import mainimg from '../img/mainimg.png';
+import mainimg from '../img/Mainimg.png';
 import './index.css';
 
 function Main() {
@@ -32,15 +32,17 @@ function Main() {
           src={mainimg}
           alt='메인이미지'
           style={{
-            width: '77vw',
+            width: '100%',
             maxHeight: '500px',
-            margin: '48px 0 0 10px',
+            marginTop: '48px',
+            backgroundPosition:'center'
           }}
         />
       </div>
       <div className='picket-container'>
         <div className='piket'>
-          <h3>자신의 'MBTI' 를 입력하고 반려견을 추천받으세요!</h3>
+          <h3>자신의 'MBTI' 를 입력하고,</h3>
+          <span>반려견을 추천받으세요!</span>
           <input
             autoComplete='off'
             type='text'

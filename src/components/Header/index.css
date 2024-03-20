@@ -26,13 +26,18 @@
     list-style-type: none;
     text-decoration-line: none;
 }
-.header-menu ul li{
-    margin-right: 35px;
-}
 .header-menu ul a{
     text-decoration-line: none;
     color: white;
     font-weight: 800;
+    padding: 5px 15px 5px 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    background-color: #f08080;
+}
+.header-menu ul a:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 /*햄버거바*/

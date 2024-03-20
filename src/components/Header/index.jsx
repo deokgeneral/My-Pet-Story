@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className='header-content'>
         <Link to={'/'} className='header-title'>
-            <span>pet</span>Park
+            <span>pet</span>Filx
         </Link>
         <div className='header-menu'>
             <ul className='header-menu_ul'>

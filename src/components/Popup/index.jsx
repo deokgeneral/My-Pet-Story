@@ -22,6 +22,7 @@ function Popup({ mbti, onClose }) {
     return (
       <div className='popup'>
         <div className='popup-info'>
+        <button onClick={onClose} className='closebtn'>X</button>
           <h2>" <span>{mbti}</span> "의 추천 반려견은</h2>
           <h3>" <span>{recommendedPet.petName}</span> " 입니다.</h3>
           <img
@@ -31,7 +32,6 @@ function Popup({ mbti, onClose }) {
           />
           <p>설명:</p>
           <p><span>{recommendedPet.petContent}</span></p>
-          <button onClick={onClose}>닫기</button>
         </div>
       </div>
     );
